@@ -8,7 +8,7 @@ openblas是基于其发展的一个开源实现。作者张先轶。
 [github网址](https://github.com/xianyi/OpenBLAS)  
 [openblas官网](http://www.openblas.net)  
 
-* 有用的相关网址  
+#### 有用的相关网址  
 作者的一次汇报：[雷锋网](https://www.leiphone.com/news/201704/Puevv3ZWxn0heoEv.html)  
 openblasapi整理[openblas api](https://blog.csdn.net/weixin_43800762/article/details/87811697)  
 openblas 整体框架解读[csdn](https://blog.csdn.net/zzk1995/article/details/70991878)  
