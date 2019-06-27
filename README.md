@@ -13,8 +13,9 @@ openblas是基于其发展的一个开源实现。作者张先轶。
 openblasapi整理[openblas api](https://blog.csdn.net/weixin_43800762/article/details/87811697)  
 openblas 整体框架解读[csdn](https://blog.csdn.net/zzk1995/article/details/70991878)  
   
-github [how to optimize gemm](https://github.com/flame/how-to-optimize-gemm)
-知乎openblas 算法解读  
+
+github [how to optimize gemm](https://github.com/flame/how-to-optimize-gemm)  
+知乎openblas 算法解读   
 arm tx1[openblas gemm入门](https://zhuanlan.zhihu.com/p/65436463)    
 [gemm cache优化](https://zhuanlan.zhihu.com/p/69700540)  
                     
