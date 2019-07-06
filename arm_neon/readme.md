@@ -1,13 +1,11 @@
 # 此目录会记录一些arm相关的软硬件知识。
 
-### 一些neon的基础知识
+## 一些neon的基础知识文档
 [ARM NEON 编程系列1 导论](http://hongbomin.com/2016/05/13/arm_neon_introduction/)   
 [NEON Introdution](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon )   
 [neon 指令查询](https://github.com/rogerou/Arm-neon-intrinsics)  
 [neon 指令](https://blog.csdn.net/hemmingway/article/details/44828303)     
 [两个neon数学运算 ](https://blog.csdn.net/yutianzuijin/article/details/79944292)    
-
-
 
 [ARMv8 架构与指令集.学习笔记](https://www.cnblogs.com/lvdongjie/p/6644821.html)
 
@@ -15,10 +13,20 @@
 
 [嵌入式 arm linux c编程](https://github.com/PacktPublishing/Mastering-Embedded-Linux-Programming-Second-Edition)
 
+## 几个概念  
+### 1、neon register bank   
+[1](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0473c/CJACABEJ.html)  
+[2](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0473c/CJACCEHB.html)  
+[3](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0473c/CJAIJHFC.html)   
+### 2、data prefetching
+[1](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0500e/CHDIGCEB.html )
+[a7](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0500e/CHDIGCEB.html )   
+### 3、cache structure   
+[a7 4-way-set-associative](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0464d/BABDIJAD.html )    
 
-# ARM与单片机到底有啥区别
+## ARM与单片机到底有啥区别
 
-## 1、软件方面
+### 1、软件方面
     这应该是最大的区别了。
     引入了操作系统。为什么引入操作系统？有什么好处？
     1）方便。主要体现在后期的开发，即在操作系统上直接开发应用程序。
@@ -29,7 +37,7 @@
     3）高效。引入进程的管理调度系统，使系统运行更加高效。
        在传统的单片机开发中大多是基于中断的前后台技术，对多任务的管理有局限性。
        
-## 2、硬件方面
+### 2、硬件方面
     现在的 8位单片机技术 硬件发展的也非常得快，也出现了许多功能非常强大的单片机。
     但是与32arm相比还是有些差距吧。
     arm芯片大多把SDRAM,LCD等控制器集成到片子当中。在8位机，大多要进行外扩。
@@ -41,7 +49,7 @@
     也就是说，有很多免费的资源可以利用，上述两种服务就是例子。
     如果在单片机上开发这些功能可以想象其中的难度。
 
-## 初学者如何选择ARM开发硬件？
+### 初学者如何选择ARM开发硬件？
     1． 如果你有做硬件和单片机的经验,
         建议自己做个最小系统板：假如你从没有做过ARM的开发，
         建议你一开始不要贪大求全，把所有的应用都做好，
