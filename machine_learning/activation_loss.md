@@ -1,6 +1,9 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+
 # 激活函数/损失函数
 
-7. relu/sigmod/softmax/交叉熵等的区别   
+1. relu/sigmod/softmax/交叉熵等的区别   
 
 ```
 一方面：sigmod和rulu都是激活函数，用在神经网络的后面起到非线性的作用。
@@ -19,3 +22,23 @@ relu能够将输出小于0的都变成0，使得输出很稀疏，然后下一�
 
 relu的存在使得量化的方式有所不同，
 一般量化分为权值量化和激活值量化，如果激活函数是relu，那么直接量化到0-255，加入激活值是sigmod或其他呢，使得输出可以小于0，
+```
+
+
+2. 损失函数    
+    1. frcnn损失函数  
+交叉熵损失  
+smooth l1损失：   
+$smooth_{L1}\left ( x \right )= \left\{\begin{matrix}& 0.5x^{2} &if \left | x \right | < 1\\ & \left | x \right |- 0.5 &otherwise\end{matrix}\right.$ 
+
+![](./pic/smooth_l1.png)   
+    softmax-cross_entropy损失：  
+    $ $
+
+3. yolo损失：  
+sigmoid-cross_entropy损失：
+
+
+
+
+
