@@ -85,4 +85,75 @@ INTEL CPU:
 1、减少输入图片的尺寸， 但是相应的准确率可能会有所下降  
 2、优化darknet工程源代码（去掉一些不必要的运算量或者优化运算过程）  
 3、剪枝和量化yolov3网络（压缩模型---> 减枝可以参考tiny-yolo的过程 ， 量化可能想到的就是定点化可能也需要牺牲精度）  
-4、darknet -----> caffe/tensorflow + tensorrt（主要是针对GPU这块的计算优化） 
+4、darknet -----> caffe/tensorflow + tensorrt（主要是针对GPU这块的计算优化）
+
+cat 、proc/cpuinfo
+```
+[root@dvrdvs /] # cat /proc/cpuinfo
+processor       : 0
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 2786.91
+Features        : swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x1
+CPU part        : 0xc0e
+CPU revision    : 1
+
+processor       : 1
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 2793.47
+Features        : swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x1
+CPU part        : 0xc0e
+CPU revision    : 1
+
+processor       : 2
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 2793.47
+Features        : swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x1
+CPU part        : 0xc0e
+CPU revision    : 1
+
+processor       : 3
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 2793.47
+Features        : swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x1
+CPU part        : 0xc0e
+CPU revision    : 1
+
+Hardware        : hi3536
+Revision        : 0000
+Serial          : 0000000000000000
+
+processor　：系统中逻辑处理核的编号。对于单核处理器，则课认为是其CPU编号，对于多核处理器则可以是物理核、或者使用超线程技术虚拟的逻辑核
+vendor_id　：CPU制造商      
+cpu family　：CPU产品系列代号
+model　　　：CPU属于其系列中的哪一代的代号
+model name：CPU属于的名字及其编号、标称主频
+stepping　  ：CPU属于制作更新版本
+cpu MHz　  ：CPU的实际使用主频
+cache size   ：CPU二级缓存大小
+physical id   ：单个CPU的标号
+siblings       ：单个CPU逻辑物理核数
+core id        ：当前物理核在其所处CPU中的编号，这个编号不一定连续
+cpu cores    ：该逻辑核所处CPU的物理核数
+apicid          ：用来区分不同逻辑核的编号，系统中每个逻辑核的此编号必然不同，此编号不一定连续
+fpu             ：是否具有浮点运算单元（Floating Point Unit）
+fpu_exception  ：是否支持浮点计算异常
+cpuid level   ：执行cpuid指令前，eax寄存器中的值，根据不同的值cpuid指令会返回不同的内容
+wp             ：表明当前CPU是否在内核态支持对用户空间的写保护（Write Protection）
+flags          ：当前CPU支持的功能
+bogomips   ：在系统内核启动时粗略测算的CPU速度（Million Instructions Per Second）
+clflush size  ：每次刷新缓存的大小单位
+cache_alignment ：缓存地址对齐单位
+address sizes     ：可访问地址空间位数
+```
