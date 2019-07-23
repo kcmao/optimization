@@ -47,21 +47,31 @@ gflops是优化效果的指标。矩阵乘的计算量是2 * M * N * K，拿计�
 
 **n内存带宽 = 数据传输速率 x 数据总线宽度**   
 ## 常见内存设备的带宽范围：   
-   磁盘：  
-   内存：   
-    RAM:    
-      SRAM:   
-      DRAM:(动态ram)      
-        SDRAM:(synchronous DRAM)同步dram     
-          DDR:(double data rate sdram)双倍速率SDRAM   
-           DDR4：20GB/S
-   SRAM: cache: 1-10ns   
-   显存：  
-   内存与显存：  
+   > 磁盘：  
+
+   >内存：   
+   >>RAM:    
+   >>>SRAM: 
+   >>>>SRAM: cache: 1-10ns
+
+   >>>DRAM:(动态ram)      
+   >>>>SDRAM:(synchronous DRAM)同步dram     
+   >>>>>DDR:(double data rate sdram)双倍速率SDRAM   
+   >>>>>>DDR4：20GB/S    
+   
+      
+   >显存：  
+   >内存与显存：  
    
    
-## 常见芯片的算力    
-  
+## 常见芯片的算力  
+以前算力都用flops表示，这是表示浮点运算次数，现在用得是ops:  
+GPU:
+
+ARMV8:
+
+INTEL CPU:
+
 ## cycle
 
 
