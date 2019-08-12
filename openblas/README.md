@@ -22,3 +22,5 @@ openblas 整体框架解读[csdn](https://blog.csdn.net/zzk1995/article/details/
 [在回答中](https://www.zhihu.com/question/27872849)
 
 ##带宽
+
+#define vmlaq_laneq_f32(a, b, v, lane)  vmlaq_n_f32(a, b, vgetq_lane_f32(v, lane)) 
